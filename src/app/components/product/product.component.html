@@ -24,14 +24,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let Product of products | filterPipe:filterText">
-        <td>{{ Product.productId }}</td>
-        <td>{{ Product.productName | uppercase}}</td>
-        <td>{{ Product.categoryId }}</td>
-        <td>{{ Product.unitPrice | currency}}</td>
-        <td>{{ Product.unitPrice | vatAdded:18 | currency }}</td>
-        <td>{{ Product.unitInStock }}</td>
-        <td><button (click)="addToCart(Product)" type="button" class="btn btn-success">Sepete Ekle</button></td>
+      <tr *ngFor="let product of products | filterPipe:filterText">
+        <td>{{ product.productId }}</td>
+        <td>{{ product.productName | uppercase}}</td>
+        <td>{{ product.categoryId }}</td>
+        <td>{{ product.unitPrice | currency}}</td>
+        <td>{{ product.unitPrice | vatAdded:18 | currency }}</td>
+        <td>{{ product.unitInStock }}</td>
+        <td><button (click)="addToCart(product)" type="button" class="btn btn-success">Sepete Ekle</button></td>
       </tr>
     </tbody> 
   </table>
