@@ -25,12 +25,12 @@
     </thead>
     
     
-    <tr *ngFor="let Product of products">
+    <tr *ngFor="let Product of products | filterPipe:filterText">
       <td>{{ Product.productId }}</td>
       <td>{{ Product.productName | uppercase}}</td>
       <td>{{ Product.categoryId }}</td>
       <td>{{ Product.unitPrice | currency}}</td>
-      <td>{{ Product.unitPrice | vatAdded:10 | currency }}</td>
+      <td>{{ Product.unitPrice | vatAdded:18 | currency }}</td>
       <td>{{ Product.unitInStock }}</td>
     </tr>
   </table>
